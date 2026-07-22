@@ -1,0 +1,1103 @@
+{
+  "instance_name": "los_movimientos_personnel_large_rest",
+  "description": "Fictional larger personnel-transport instance with 24 paired pickup-and-delivery requests, producing 48 service nodes. Six pickup trucks can carry at most three passengers each, excluding the driver. Several direct arcs exceed 120 minutes of driving, activating mandatory 15-minute roadside breaks.",
+  "time_unit": "minutes_after_midnight",
+  "planning_horizon": {
+    "start": 360,
+    "end": 1200,
+    "start_label": "06:00",
+    "end_label": "20:00"
+  },
+  "locations": {
+    "BASE": {
+      "name": "Operational Base",
+      "x_km": 0,
+      "y_km": 0
+    },
+    "RIG_A": {
+      "name": "Rig A",
+      "x_km": 25,
+      "y_km": 15
+    },
+    "RIG_B": {
+      "name": "Rig B",
+      "x_km": 42,
+      "y_km": 10
+    },
+    "RIG_C": {
+      "name": "Rig C",
+      "x_km": 18,
+      "y_km": 38
+    },
+    "RIG_D": {
+      "name": "Rig D",
+      "x_km": 65,
+      "y_km": 35
+    },
+    "RIG_E": {
+      "name": "Rig E",
+      "x_km": 48,
+      "y_km": 65
+    },
+    "RIG_F": {
+      "name": "Rig F",
+      "x_km": 95,
+      "y_km": 20
+    },
+    "RIG_G": {
+      "name": "Rig G",
+      "x_km": 110,
+      "y_km": 65
+    },
+    "RIG_H": {
+      "name": "Rig H",
+      "x_km": 75,
+      "y_km": 100
+    },
+    "RIG_I": {
+      "name": "Rig I",
+      "x_km": 140,
+      "y_km": 95
+    }
+  },
+  "vehicles": [
+    {
+      "id": "PU_1",
+      "capacity_passengers": 3,
+      "start_location": "BASE",
+      "end_location": "BASE",
+      "start_time": 360,
+      "end_time": 1200
+    },
+    {
+      "id": "PU_2",
+      "capacity_passengers": 3,
+      "start_location": "BASE",
+      "end_location": "BASE",
+      "start_time": 360,
+      "end_time": 1200
+    },
+    {
+      "id": "PU_3",
+      "capacity_passengers": 3,
+      "start_location": "BASE",
+      "end_location": "BASE",
+      "start_time": 360,
+      "end_time": 1200
+    },
+    {
+      "id": "PU_4",
+      "capacity_passengers": 3,
+      "start_location": "BASE",
+      "end_location": "BASE",
+      "start_time": 360,
+      "end_time": 1200
+    },
+    {
+      "id": "PU_5",
+      "capacity_passengers": 3,
+      "start_location": "BASE",
+      "end_location": "BASE",
+      "start_time": 360,
+      "end_time": 1200
+    },
+    {
+      "id": "PU_6",
+      "capacity_passengers": 3,
+      "start_location": "BASE",
+      "end_location": "BASE",
+      "start_time": 360,
+      "end_time": 1200
+    }
+  ],
+  "requests": [
+    {
+      "id": "R01",
+      "passengers": 2,
+      "movement_type": "base_to_rig",
+      "pickup": {
+        "node_id": "P01",
+        "location": "BASE",
+        "time_window": [
+          360,
+          395
+        ],
+        "time_window_label": [
+          "06:00",
+          "06:35"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D01",
+        "location": "RIG_A",
+        "time_window": [
+          379,
+          484
+        ],
+        "time_window_label": [
+          "06:19",
+          "08:04"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R02",
+      "passengers": 1,
+      "movement_type": "base_to_rig",
+      "pickup": {
+        "node_id": "P02",
+        "location": "BASE",
+        "time_window": [
+          370,
+          405
+        ],
+        "time_window_label": [
+          "06:10",
+          "06:45"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D02",
+        "location": "RIG_B",
+        "time_window": [
+          405,
+          510
+        ],
+        "time_window_label": [
+          "06:45",
+          "08:30"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R03",
+      "passengers": 3,
+      "movement_type": "base_to_rig",
+      "pickup": {
+        "node_id": "P03",
+        "location": "BASE",
+        "time_window": [
+          380,
+          415
+        ],
+        "time_window_label": [
+          "06:20",
+          "06:55"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D03",
+        "location": "RIG_C",
+        "time_window": [
+          413,
+          518
+        ],
+        "time_window_label": [
+          "06:53",
+          "08:38"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R04",
+      "passengers": 2,
+      "movement_type": "base_to_rig",
+      "pickup": {
+        "node_id": "P04",
+        "location": "BASE",
+        "time_window": [
+          360,
+          395
+        ],
+        "time_window_label": [
+          "06:00",
+          "06:35"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D04",
+        "location": "RIG_F",
+        "time_window": [
+          496,
+          601
+        ],
+        "time_window_label": [
+          "08:16",
+          "10:01"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R05",
+      "passengers": 1,
+      "movement_type": "base_to_rig",
+      "pickup": {
+        "node_id": "P05",
+        "location": "BASE",
+        "time_window": [
+          375,
+          410
+        ],
+        "time_window_label": [
+          "06:15",
+          "06:50"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D05",
+        "location": "RIG_H",
+        "time_window": [
+          547,
+          652
+        ],
+        "time_window_label": [
+          "09:07",
+          "10:52"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R06",
+      "passengers": 2,
+      "movement_type": "base_to_rig",
+      "pickup": {
+        "node_id": "P06",
+        "location": "BASE",
+        "time_window": [
+          385,
+          420
+        ],
+        "time_window_label": [
+          "06:25",
+          "07:00"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D06",
+        "location": "RIG_I",
+        "time_window": [
+          639,
+          744
+        ],
+        "time_window_label": [
+          "10:39",
+          "12:24"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R07",
+      "passengers": 2,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P07",
+        "location": "RIG_A",
+        "time_window": [
+          404,
+          479
+        ],
+        "time_window_label": [
+          "06:44",
+          "07:59"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D07",
+        "location": "RIG_D",
+        "time_window": [
+          471,
+          576
+        ],
+        "time_window_label": [
+          "07:51",
+          "09:36"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R08",
+      "passengers": 2,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P08",
+        "location": "RIG_B",
+        "time_window": [
+          430,
+          505
+        ],
+        "time_window_label": [
+          "07:10",
+          "08:25"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D08",
+        "location": "RIG_E",
+        "time_window": [
+          513,
+          618
+        ],
+        "time_window_label": [
+          "08:33",
+          "10:18"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R09",
+      "passengers": 2,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P09",
+        "location": "RIG_C",
+        "time_window": [
+          438,
+          513
+        ],
+        "time_window_label": [
+          "07:18",
+          "08:33"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D09",
+        "location": "RIG_A",
+        "time_window": [
+          474,
+          579
+        ],
+        "time_window_label": [
+          "07:54",
+          "09:39"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R10",
+      "passengers": 2,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P10",
+        "location": "RIG_F",
+        "time_window": [
+          521,
+          596
+        ],
+        "time_window_label": [
+          "08:41",
+          "09:56"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D10",
+        "location": "RIG_G",
+        "time_window": [
+          592,
+          697
+        ],
+        "time_window_label": [
+          "09:52",
+          "11:37"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R11",
+      "passengers": 1,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P11",
+        "location": "RIG_H",
+        "time_window": [
+          572,
+          647
+        ],
+        "time_window_label": [
+          "09:32",
+          "10:47"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D11",
+        "location": "RIG_I",
+        "time_window": [
+          670,
+          775
+        ],
+        "time_window_label": [
+          "11:10",
+          "12:55"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R12",
+      "passengers": 2,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P12",
+        "location": "RIG_I",
+        "time_window": [
+          664,
+          739
+        ],
+        "time_window_label": [
+          "11:04",
+          "12:19"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D12",
+        "location": "RIG_E",
+        "time_window": [
+          824,
+          929
+        ],
+        "time_window_label": [
+          "13:44",
+          "15:29"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R13",
+      "passengers": 1,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P13",
+        "location": "RIG_D",
+        "time_window": [
+          496,
+          571
+        ],
+        "time_window_label": [
+          "08:16",
+          "09:31"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D13",
+        "location": "RIG_F",
+        "time_window": [
+          546,
+          651
+        ],
+        "time_window_label": [
+          "09:06",
+          "10:51"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R14",
+      "passengers": 2,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P14",
+        "location": "RIG_E",
+        "time_window": [
+          538,
+          613
+        ],
+        "time_window_label": [
+          "08:58",
+          "10:13"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D14",
+        "location": "RIG_H",
+        "time_window": [
+          604,
+          709
+        ],
+        "time_window_label": [
+          "10:04",
+          "11:49"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R15",
+      "passengers": 1,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P15",
+        "location": "RIG_A",
+        "time_window": [
+          499,
+          574
+        ],
+        "time_window_label": [
+          "08:19",
+          "09:34"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D15",
+        "location": "RIG_B",
+        "time_window": [
+          526,
+          631
+        ],
+        "time_window_label": [
+          "08:46",
+          "10:31"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R16",
+      "passengers": 1,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P16",
+        "location": "RIG_G",
+        "time_window": [
+          617,
+          692
+        ],
+        "time_window_label": [
+          "10:17",
+          "11:32"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D16",
+        "location": "RIG_D",
+        "time_window": [
+          698,
+          803
+        ],
+        "time_window_label": [
+          "11:38",
+          "13:23"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R17",
+      "passengers": 2,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P17",
+        "location": "RIG_I",
+        "time_window": [
+          695,
+          770
+        ],
+        "time_window_label": [
+          "11:35",
+          "12:50"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D17",
+        "location": "RIG_G",
+        "time_window": [
+          759,
+          864
+        ],
+        "time_window_label": [
+          "12:39",
+          "14:24"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R18",
+      "passengers": 1,
+      "movement_type": "rig_to_rig",
+      "pickup": {
+        "node_id": "P18",
+        "location": "RIG_E",
+        "time_window": [
+          849,
+          924
+        ],
+        "time_window_label": [
+          "14:09",
+          "15:24"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D18",
+        "location": "RIG_C",
+        "time_window": [
+          910,
+          1015
+        ],
+        "time_window_label": [
+          "15:10",
+          "16:55"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R19",
+      "passengers": 1,
+      "movement_type": "rig_to_base",
+      "pickup": {
+        "node_id": "P19",
+        "location": "RIG_F",
+        "time_window": [
+          571,
+          646
+        ],
+        "time_window_label": [
+          "09:31",
+          "10:46"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D19",
+        "location": "BASE",
+        "time_window": [
+          732,
+          867
+        ],
+        "time_window_label": [
+          "12:12",
+          "14:27"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R20",
+      "passengers": 2,
+      "movement_type": "rig_to_base",
+      "pickup": {
+        "node_id": "P20",
+        "location": "RIG_H",
+        "time_window": [
+          629,
+          704
+        ],
+        "time_window_label": [
+          "10:29",
+          "11:44"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D20",
+        "location": "BASE",
+        "time_window": [
+          831,
+          966
+        ],
+        "time_window_label": [
+          "13:51",
+          "16:06"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R21",
+      "passengers": 1,
+      "movement_type": "rig_to_base",
+      "pickup": {
+        "node_id": "P21",
+        "location": "RIG_B",
+        "time_window": [
+          551,
+          626
+        ],
+        "time_window_label": [
+          "09:11",
+          "10:26"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D21",
+        "location": "BASE",
+        "time_window": [
+          616,
+          751
+        ],
+        "time_window_label": [
+          "10:16",
+          "12:31"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R22",
+      "passengers": 2,
+      "movement_type": "rig_to_base",
+      "pickup": {
+        "node_id": "P22",
+        "location": "RIG_D",
+        "time_window": [
+          723,
+          798
+        ],
+        "time_window_label": [
+          "12:03",
+          "13:18"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D22",
+        "location": "BASE",
+        "time_window": [
+          834,
+          969
+        ],
+        "time_window_label": [
+          "13:54",
+          "16:09"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R23",
+      "passengers": 1,
+      "movement_type": "rig_to_base",
+      "pickup": {
+        "node_id": "P23",
+        "location": "RIG_G",
+        "time_window": [
+          784,
+          859
+        ],
+        "time_window_label": [
+          "13:04",
+          "14:19"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D23",
+        "location": "BASE",
+        "time_window": [
+          991,
+          1126
+        ],
+        "time_window_label": [
+          "16:31",
+          "18:46"
+        ],
+        "service_time": 10
+      }
+    },
+    {
+      "id": "R24",
+      "passengers": 2,
+      "movement_type": "rig_to_base",
+      "pickup": {
+        "node_id": "P24",
+        "location": "RIG_C",
+        "time_window": [
+          935,
+          1010
+        ],
+        "time_window_label": [
+          "15:35",
+          "16:50"
+        ],
+        "service_time": 10
+      },
+      "delivery": {
+        "node_id": "D24",
+        "location": "BASE",
+        "time_window": [
+          998,
+          1133
+        ],
+        "time_window_label": [
+          "16:38",
+          "18:53"
+        ],
+        "service_time": 10
+      }
+    }
+  ],
+  "travel_time_minutes": {
+    "BASE": {
+      "BASE": 0,
+      "RIG_A": 49,
+      "RIG_B": 70,
+      "RIG_C": 68,
+      "RIG_D": 116,
+      "RIG_E": 126,
+      "RIG_F": 151,
+      "RIG_G": 197,
+      "RIG_H": 192,
+      "RIG_I": 259
+    },
+    "RIG_A": {
+      "BASE": 49,
+      "RIG_A": 0,
+      "RIG_B": 32,
+      "RIG_C": 41,
+      "RIG_D": 72,
+      "RIG_E": 88,
+      "RIG_F": 110,
+      "RIG_G": 153,
+      "RIG_H": 153,
+      "RIG_I": 215
+    },
+    "RIG_B": {
+      "BASE": 70,
+      "RIG_A": 32,
+      "RIG_B": 0,
+      "RIG_C": 60,
+      "RIG_D": 56,
+      "RIG_E": 88,
+      "RIG_F": 86,
+      "RIG_G": 136,
+      "RIG_H": 149,
+      "RIG_I": 200
+    },
+    "RIG_C": {
+      "BASE": 68,
+      "RIG_A": 41,
+      "RIG_B": 60,
+      "RIG_C": 0,
+      "RIG_D": 76,
+      "RIG_E": 66,
+      "RIG_F": 124,
+      "RIG_G": 149,
+      "RIG_H": 131,
+      "RIG_I": 207
+    },
+    "RIG_D": {
+      "BASE": 116,
+      "RIG_A": 72,
+      "RIG_B": 56,
+      "RIG_C": 76,
+      "RIG_D": 0,
+      "RIG_E": 57,
+      "RIG_F": 55,
+      "RIG_G": 86,
+      "RIG_H": 104,
+      "RIG_I": 149
+    },
+    "RIG_E": {
+      "BASE": 126,
+      "RIG_A": 88,
+      "RIG_B": 88,
+      "RIG_C": 66,
+      "RIG_D": 57,
+      "RIG_E": 0,
+      "RIG_F": 103,
+      "RIG_G": 98,
+      "RIG_H": 71,
+      "RIG_I": 150
+    },
+    "RIG_F": {
+      "BASE": 151,
+      "RIG_A": 110,
+      "RIG_B": 86,
+      "RIG_C": 124,
+      "RIG_D": 55,
+      "RIG_E": 103,
+      "RIG_F": 0,
+      "RIG_G": 76,
+      "RIG_H": 129,
+      "RIG_I": 136
+    },
+    "RIG_G": {
+      "BASE": 197,
+      "RIG_A": 153,
+      "RIG_B": 136,
+      "RIG_C": 149,
+      "RIG_D": 86,
+      "RIG_E": 98,
+      "RIG_F": 76,
+      "RIG_G": 0,
+      "RIG_H": 79,
+      "RIG_I": 69
+    },
+    "RIG_H": {
+      "BASE": 192,
+      "RIG_A": 153,
+      "RIG_B": 149,
+      "RIG_C": 131,
+      "RIG_D": 104,
+      "RIG_E": 71,
+      "RIG_F": 129,
+      "RIG_G": 79,
+      "RIG_H": 0,
+      "RIG_I": 103
+    },
+    "RIG_I": {
+      "BASE": 259,
+      "RIG_A": 215,
+      "RIG_B": 200,
+      "RIG_C": 207,
+      "RIG_D": 149,
+      "RIG_E": 150,
+      "RIG_F": 136,
+      "RIG_G": 69,
+      "RIG_H": 103,
+      "RIG_I": 0
+    }
+  },
+  "distance_km": {
+    "BASE": {
+      "BASE": 0.0,
+      "RIG_A": 29.2,
+      "RIG_B": 43.2,
+      "RIG_C": 42.0,
+      "RIG_D": 73.8,
+      "RIG_E": 80.8,
+      "RIG_F": 97.1,
+      "RIG_G": 127.8,
+      "RIG_H": 125.0,
+      "RIG_I": 169.2
+    },
+    "RIG_A": {
+      "BASE": 29.2,
+      "RIG_A": 0.0,
+      "RIG_B": 17.7,
+      "RIG_C": 24.0,
+      "RIG_D": 44.7,
+      "RIG_E": 55.0,
+      "RIG_F": 70.2,
+      "RIG_G": 98.6,
+      "RIG_H": 98.6,
+      "RIG_I": 140.1
+    },
+    "RIG_B": {
+      "BASE": 43.2,
+      "RIG_A": 17.7,
+      "RIG_B": 0.0,
+      "RIG_C": 36.9,
+      "RIG_D": 34.0,
+      "RIG_E": 55.3,
+      "RIG_F": 53.9,
+      "RIG_G": 87.5,
+      "RIG_H": 95.9,
+      "RIG_I": 129.7
+    },
+    "RIG_C": {
+      "BASE": 42.0,
+      "RIG_A": 24.0,
+      "RIG_B": 36.9,
+      "RIG_C": 0.0,
+      "RIG_D": 47.1,
+      "RIG_E": 40.4,
+      "RIG_F": 79.1,
+      "RIG_G": 95.9,
+      "RIG_H": 84.2,
+      "RIG_I": 134.7
+    },
+    "RIG_D": {
+      "BASE": 73.8,
+      "RIG_A": 44.7,
+      "RIG_B": 34.0,
+      "RIG_C": 47.1,
+      "RIG_D": 0.0,
+      "RIG_E": 34.5,
+      "RIG_F": 33.5,
+      "RIG_G": 54.1,
+      "RIG_H": 65.8,
+      "RIG_I": 96.0
+    },
+    "RIG_E": {
+      "BASE": 80.8,
+      "RIG_A": 55.0,
+      "RIG_B": 55.3,
+      "RIG_C": 40.4,
+      "RIG_D": 34.5,
+      "RIG_E": 0.0,
+      "RIG_F": 65.1,
+      "RIG_G": 62.0,
+      "RIG_H": 44.2,
+      "RIG_I": 96.8
+    },
+    "RIG_F": {
+      "BASE": 97.1,
+      "RIG_A": 70.2,
+      "RIG_B": 53.9,
+      "RIG_C": 79.1,
+      "RIG_D": 33.5,
+      "RIG_E": 65.1,
+      "RIG_F": 0.0,
+      "RIG_G": 47.4,
+      "RIG_H": 82.5,
+      "RIG_I": 87.5
+    },
+    "RIG_G": {
+      "BASE": 127.8,
+      "RIG_A": 98.6,
+      "RIG_B": 87.5,
+      "RIG_C": 95.9,
+      "RIG_D": 54.1,
+      "RIG_E": 62.0,
+      "RIG_F": 47.4,
+      "RIG_G": 0.0,
+      "RIG_H": 49.5,
+      "RIG_I": 42.4
+    },
+    "RIG_H": {
+      "BASE": 125.0,
+      "RIG_A": 98.6,
+      "RIG_B": 95.9,
+      "RIG_C": 84.2,
+      "RIG_D": 65.8,
+      "RIG_E": 44.2,
+      "RIG_F": 82.5,
+      "RIG_G": 49.5,
+      "RIG_H": 0.0,
+      "RIG_I": 65.2
+    },
+    "RIG_I": {
+      "BASE": 169.2,
+      "RIG_A": 140.1,
+      "RIG_B": 129.7,
+      "RIG_C": 134.7,
+      "RIG_D": 96.0,
+      "RIG_E": 96.8,
+      "RIG_F": 87.5,
+      "RIG_G": 42.4,
+      "RIG_H": 65.2,
+      "RIG_I": 0.0
+    }
+  }
+}
